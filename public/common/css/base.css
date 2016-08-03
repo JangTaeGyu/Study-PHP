@@ -1,0 +1,72 @@
+@import "common.css";
+
+/* Base */
+html { width: 100%; height: 100%; overflow-y:scoll; }
+body { background: #f8f8f8; }
+body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, form, fieldset, textarea, input, select, button, table, tr, th,td { margin: 0; padding: 0; color: #6D7581; font-size: 12px; font-family: "나눔고딕", "NanumGothic", "NanumGothicOTF", "맑은고딕", "Malgun Gothic"; -webkit-text-size-adjust:none; }
+ul, ol, li { list-style: none }
+input, img, fieldset { border: none; vertical-align: top; }
+legend, caption { visibility: hidden; width: 1px;height: 0px;overflow: hidden; font-size: 14px; line-height: 0; text-indent: -9999px; }
+button { border: 0; background: none; cursor: pointer; }
+select { padding: 2px; height: 28px; background: #FFF; color: #6D7581; border: 1px solid #DFDFDF; }
+textarea { vertical-align: top; background: #FFF; color: #6D7581; border: 1px solid #DFDFDF; padding: 5px; }
+table { border-collapse: collapse; width: 100%; }
+em, address { font-style: normal; }
+a { text-decoration: none; color: inherit; }
+a:hover, a:focus, a:active { text-decoration: none; }
+
+/* Input */
+input[type="text"], input[type="password"] { padding: 2px 8px; height: 25px; border: 1px solid #DFDFDF; background: #FDFDFD; color: #6D7581; vertical-align: middle; }
+select { padding: 2px 2px; height: 31px; border: 1px solid #DFDFDF; background: #FDFDFD; color: #6D7581; vertical-align: middle; }
+
+/* Login */
+#panel_login { width: 350px; min-height: 230px; background-color: #FDFDFD; border: 1px solid #E7E7E7; margin: 180px auto 0; border-radius: 5px; position: relative; }
+#panel_login .head { background: #222D32; height: 50px; text-align: center;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px 5px 0 0;}
+#panel_login .head h1 { color:#FFF; font-size: 16px; line-height: 50px; font-weight: normal; }
+#panel_login .contents { margin: 20px 30px; }
+
+/* Layout */
+.wrap { position: relative; width: 100%; height: 100%; background: #222d32; }
+
+.panel_info { position: fixed; top: 0; bottom: 0; left: 0; background: #222d32; width: 70px; height: 100%; float: left; }
+
+/* 로고 */
+.panel_info .logo { margin-top: 15px; width: 100%; text-align: center; }
+.panel_info .logo h1 { color: #fdfdfd; }
+
+/* 프로필 */
+.panel_info .profile { margin-top: 60px; width: 100%; color: #fdfdfd; text-align: center; }
+.panel_info .profile dl dt { color: #fdfdfd; }
+.panel_info .profile dl dd { margin-top: 5px; color: #fdfdfd; }
+.panel_info .profile p { color: #fdfdfd; }
+
+/* 메뉴 */
+.panel_info .menu { margin-top: 60px; width: 100%; color: #fdfdfd; text-align: center; }
+.panel_info .menu ul { color: #fdfdfd; text-align: center; }
+.panel_info .menu ul li { color: #fdfdfd; text-align: center; width: 35px; line-height: 35px; border: 1px solid #fdfdfd; border-radius: 100%; margin: 30px 15px; }
+
+/* 메뉴 리스트 */
+.panel_menu_list { position: fixed; top: 0; bottom: 0; left: 70px; background: #2D3C42; width: 180px; height: 100%; padding: 15px; }
+.panel_menu_list h2 { color: #fdfdfd; font-size: 30px; font-weight: 200; margin-top: 10px; }
+.panel_menu_list ul { margin-top: 15px; }
+.panel_menu_list ul li { padding-left: 15px; line-height: 35px; color: #DBDBDB; width: 100%; font-size: 14px; }
+.panel_menu_list ul i { color: #00c0ef; float: right; margin: 11px 20px 0 0; }
+
+.panel_contents { position: fixed; top: 0; bottom: 0; left: 280px; background: #2D3C42; width: 1170px; height: 100%; background-color: #fdfdfd; overflow-y: auto; padding: 15px; }
+.panel_contents h3 { margin: 18px 0; font-size: 20px; font-weight: 500;}
+
+.basic_table {}
+
+.basic_table { width: 100%; }
+.basic_table thead tr { background-color: #f8f8f8; border-top: 2px solid #3c8dbc; height: 35px; }
+.basic_table thead tr th { border-left: 1px solid #c7c7c7; border-bottom: 1px solid #c7c7c7; font-weight: bold; }
+.basic_table thead tr th.none { border-left: none; }
+.basic_table tbody tr { height: 40px; }
+.basic_table tbody tr th { background-color: #f4f4f4; border-bottom: 1px solid #c7c7c7; font-weight: bold; }
+.basic_table tbody tr th.left { border-left:1px solid #c7c7c7; }
+.basic_table tbody tr th.right { border-right:1px solid #c7c7c7; }
+.basic_table tbody tr td { border-left: 1px solid #c7c7c7; border-bottom: 1px solid #c7c7c7; padding: 0 5px; }
+.basic_table tbody tr td.none { border-left: none; }
