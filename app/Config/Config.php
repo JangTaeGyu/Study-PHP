@@ -14,4 +14,4 @@ return [
     'csrf' => [
         'token_name' => 'token'
     ]
-];
+];;
