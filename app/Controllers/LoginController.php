@@ -29,7 +29,6 @@ class LoginController extends Controller
                 if ($user->count() === 0) throw new \Exception("일치하는 아이디가 없습니다.");
 
                 // 비밀번호 체크
-                //if ($user->first()['password'] != Hash::make($request['password'], $user->first()['salt'])) throw new \Exception("비밀번호가 일치하지 않습니다.");
                 if (!password_verify($request['password'], $user->first()['password'])) throw new \Exception("비밀번호가 일치하지 않습니다.");
 
                 // 상태 체크
