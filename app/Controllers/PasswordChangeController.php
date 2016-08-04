@@ -26,16 +26,19 @@ class PasswordChangeController extends Controller
                 }
 
                 // 비밀번호 체크
+                /*
                 if ($this->session['password'] != Hash::make($request['password_current'], $this->session['salt'])) {
                     throw new \Exception("현재비밀번호가 일치하지 않습니다.");
                 }
+                */
+                if (!password_verify($request['password_current'], $this->session['password'])) throw new \Exception("현재비밀번호가 일치하지 않습니다.");
 
                 // Hash Key 생성
                 $salt = Hash::salt(32);
 
                 // 비밀번호 수정
                 $result = User::getInstance()->update($this->session['id'], [
-                    'password' => Hash::make($request['password'], $salt),
+                    'password' => Hash::passwordHash($request['password'], $salt),
                     'salt' => $salt,
                     'edt_date' => date('Y-m-d H:i:s')
                 ]);
