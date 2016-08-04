@@ -33,7 +33,7 @@ class SignUpController extends Controller
                 // 회원저장
                 $result = User::getInstance()->create([
                     'id' => $request['id'],
-                    'password' => Hash::make($request['password'], $salt),
+                    'password' => Hash::passwordHash($request['password'], $salt),
                     'salt' => $salt,
                     'name' => $request['name'],
                     'email' => $request['email'],
