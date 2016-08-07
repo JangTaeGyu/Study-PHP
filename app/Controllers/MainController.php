@@ -8,7 +8,7 @@ use App\Core\{ Hash, Input, Session, Redirect, Validator };
 
 class MainController extends Controller
 {
-    public function main(array $request, array $response, bool $exists)
+    public function getMain(array $request, array $response, bool $exists)
     {
         view('auth/main');
     }

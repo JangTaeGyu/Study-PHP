@@ -8,7 +8,7 @@ use App\Core\{ Input, Session, Redirect, Validator };
 
 class MemberController extends Controller
 {
-    public function member(array $request, array $response, bool $exists)
+    public function getMember(array $request, array $response, bool $exists)
     {
         $request = elms($request, [
             'mode' => 'insert',
@@ -23,7 +23,7 @@ class MemberController extends Controller
         view('auth/menu/member', ['input' => $request, 'output' => $response]);
     }
 
-    public function create(array $request, array $response, bool $exists)
+    public function postCreate(array $request, array $response, bool $exists)
     {
         try {
             // Token 체크하기
@@ -59,7 +59,7 @@ class MemberController extends Controller
         Redirect::to("/menu/member");
     }
 
-    public function update(array $request, array $response, bool $exists)
+    public function postUpdate(array $request, array $response, bool $exists)
     {
         try {
             // Token 체크하기
@@ -96,7 +96,7 @@ class MemberController extends Controller
         Redirect::to("/menu/member");
     }
 
-    public function delete(array $request, array $response, bool $exists)
+    public function postDelete(array $request, array $response, bool $exists)
     {
         try {
             // Token 체크하기

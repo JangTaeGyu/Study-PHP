@@ -8,7 +8,7 @@ use App\Core\{ Hash, Input, Session, Redirect, Validator };
 
 class PasswordChangeController extends Controller
 {
-    public function passwordChange(array $request, array $response, bool $exists)
+    public function allPasswordChange(array $request, array $response, bool $exists)
     {
         if ($exists) {
             try {

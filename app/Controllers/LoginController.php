@@ -8,7 +8,7 @@ use App\Core\{ Hash, Input, Session, Redirect, Validator };
 
 class LoginController extends Controller
 {
-    public function login(array $request, array $response, bool $exists)
+    public function allLogin(array $request, array $response, bool $exists)
     {
         if ($exists) {
             try {

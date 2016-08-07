@@ -8,7 +8,7 @@ use App\Core\{ Input, Session, Redirect, Validator };
 
 class UpdateController extends Controller
 {
-    public function update(array $request, array $response, bool $exists)
+    public function allUpdate(array $request, array $response, bool $exists)
     {
         $request = elms($request, [
             'name' => $this->session['name'],       // 이름

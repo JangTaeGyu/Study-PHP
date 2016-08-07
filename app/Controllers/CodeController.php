@@ -8,7 +8,7 @@ use App\Core\{ Input, Session, Redirect, Validator };
 
 class CodeController extends Controller
 {
-    public function code(array $request, array $response, bool $exists)
+    public function getCode(array $request, array $response, bool $exists)
     {
         $request = elms($request, [
             'mode' => 'insert',
@@ -23,7 +23,7 @@ class CodeController extends Controller
         view('auth/menu/code', ['input' => $request, 'output' => $response]);
     }
 
-    public function create(array $request, array $response, bool $exists)
+    public function postCreate(array $request, array $response, bool $exists)
     {
         try {
             // Token 체크하기
@@ -57,7 +57,7 @@ class CodeController extends Controller
         Redirect::to("/menu/code?code={$request['main']}");
     }
 
-    public function update(array $request, array $response, bool $exists)
+    public function postUpdate(array $request, array $response, bool $exists)
     {
         try {
             // Token 체크하기
@@ -92,7 +92,7 @@ class CodeController extends Controller
         Redirect::to("/menu/code?code={$request['main']}");
     }
 
-    public function delete(array $request, array $response, bool $exists)
+    public function postDelete(array $request, array $response, bool $exists)
     {
         try {
             // Token 체크하기

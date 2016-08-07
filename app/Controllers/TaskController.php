@@ -8,7 +8,7 @@ use App\Core\{ Input, Session, Redirect, Validator };
 
 class TaskController extends Controller
 {
-    public function task(array $request, array $response, bool $exists)
+    public function getTask(array $request, array $response, bool $exists)
     {
         $request = elms($request, [
             'target' => '',
@@ -29,7 +29,7 @@ class TaskController extends Controller
         view('auth/menu/task/index', ['input' => $request, 'output' => $response]);
     }
 
-    public function waiting(array $request, array $response, bool $exists)
+    public function getWaiting(array $request, array $response, bool $exists)
     {
         $request = elms($request, [
             'target' => '',
@@ -50,7 +50,7 @@ class TaskController extends Controller
         view('auth/menu/task/waiting', ['input' => $request, 'output' => $response]);
     }
 
-    public function complete(array $request, array $response, bool $exists)
+    public function getComplete(array $request, array $response, bool $exists)
     {
         $request = elms($request, [
             'target' => '',
@@ -71,7 +71,7 @@ class TaskController extends Controller
         view('auth/menu/task/complete', ['input' => $request, 'output' => $response]);
     }
 
-    public function issue(array $request, array $response, bool $exists)
+    public function getIssue(array $request, array $response, bool $exists)
     {
         $request = elms($request, [
             'target' => '',
@@ -92,7 +92,7 @@ class TaskController extends Controller
         view('auth/menu/task/issue', ['input' => $request, 'output' => $response]);
     }
 
-    public function input(array $request, array $response, bool $exists)
+    public function getInput(array $request, array $response, bool $exists)
     {
         $request = elms($request, [
             'idx' => '',
@@ -121,7 +121,7 @@ class TaskController extends Controller
         view('auth/menu/task/input', ['input' => $request, 'output' => $response]);
     }
 
-    public function create(array $request, array $response, bool $exists)
+    public function postCreate(array $request, array $response, bool $exists)
     {
         try {
             // Token 체크하기
@@ -160,7 +160,7 @@ class TaskController extends Controller
         Redirect::to($response['result'] ? '/menu/task' : '/menu/task/input');
     }
 
-    public function update(array $request, array $response, bool $exists)
+    public function postUpdate(array $request, array $response, bool $exists)
     {
         try {
             // Token 체크하기
