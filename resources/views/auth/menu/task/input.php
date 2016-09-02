@@ -50,7 +50,7 @@
                 <tr>
                     <th>내용</th>
                     <td colspan="3">
-                        <textarea name="contents" style="width: 906px; height: 250px; margin: 5px 0;"><?=elm($output['info'], 'contents')?></textarea>
+                        <textarea name="contents" style="width: 906px; height: 250px; margin: 5px 0; font-size: 16px;"><?=elm($output['info'], 'contents')?></textarea>
                     </td>
                 </tr>
                 <tr>

@@ -19,7 +19,7 @@ class Task extends Model
         $sql = " SELECT *, (SELECT name FROM member where idx = member_idx) AS name FROM {$this->table} WHERE 1 = 1 ";
         if ($args['target'] != '') $sql .= sprintf(" AND target = '%s' ", $args['target']);
         if ($args['kind'] != '') $sql .= sprintf(" AND kind = '%s' ", $args['kind']);
-        if ($args['title'] != '') $sql .= sprintf(" AND title LIKE '%%%s%%' ", $args['title']);
+        if ($args['title'] != '') $sql .= sprintf(" AND title LIKE '%%%s%%' OR contents LIKE '%%%s%%'", $args['title'], $args['title']);
         if ($args['member_idx'] != '') $sql .= sprintf(" AND member_idx = '%s' ", $args['member_idx']);
         if (in_array($args['state'], ['W', 'S', 'N'])) $sql .= sprintf(" AND state = '%s' ", $args['state']);
         if ($complete) {

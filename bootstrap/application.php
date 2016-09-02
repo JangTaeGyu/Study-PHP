@@ -36,5 +36,4 @@ $app->get('/logout', function(){
     Redirect::to('/');
 })->auth(true);
 
-
 $app->run();

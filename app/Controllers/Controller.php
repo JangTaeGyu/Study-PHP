@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Models\User\UserSessions;
-use App\Core\{ Session, Redirect };
 
 class Controller
 {
